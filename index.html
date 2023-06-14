@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Devarsh Shah</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <script>
+            function killCopy(e){
+                return false;
+            }
+            function reEnable(){
+                return true;
+            }
+            document.onselectstart=new Function ("return false");
+            if (window.sidebar){
+                document.onmousedown=killCopy;
+                document.onclick=reEnable;
+            }
+        </script>
+
+    </head>
+    <body>
+        <script type="text/javascript">document.addEventListener("contextmenu",function(e){e.preventDefault();});</script>
+        <section class="sec">
+            <header>
+                <a href="#"><img src="logo.png" class="logo"></a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>That's What<br><span>I Like</span></h2>
+                    <p>Pepsi. Diet Pepsi. Pepsi Zero Sugar. The gang’s all here. Compare flavors, get nutritional facts and check out ingredients for all our Pepsi products.</p>
+                        <a href="https://www.pepsi.com/#!products">View All Products</a>
+                </div>
+                <div class="imgBox">
+                    <image src="pepsiblue.png" class="pepsi"></image>
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="pepsiblue.png" onclick="imgSlider('pepsiblue.png');changeBgColor('rgb(0,101,195)')"></li>
+                <li><img src="pepsigray.png" onclick="imgSlider('pepsigray.png');changeBgColor('rgb(135,135,135)')"></li>
+                <li><img src="pepsiblack.png" onclick="imgSlider('pepsiblack.png');changeBgColor('rgb(0,0,0)')"></li>
+                <li><img src="pepsired.png" onclick="imgSlider('pepsired.png');changeBgColor('rgb(197,20,47)')"></li>
+                <li><img src="pepsigold.png" onclick="imgSlider('pepsigold.png');changeBgColor('rgb(187,147,57)')"></li>
+                <li><img src="pepsiwhite.png" onclick="imgSlider('pepsiwhite.png');changeBgColor('rgb(190,190,190)')"></li>
+                
+               </ul>
+            <footer id="footer">
+                <div class="copyright">
+                    &copy; Copyright <strong>2021-2022</strong>. All Rights Reserved
+                  </div>
+                  <div class="credits">Designed by <strong><a href="https://shahdevarsh.me/">Devarsh Shah</a></strong>
+            
+                  </div>
+                  
+            
+                </footer>
+        
+        </section>  
+      
+        <script type="text/JavaScript">
+        function imgSlider(anything) {
+            document.querySelector('.pepsi').src = anything;
+            
+        }
+        function changeBgColor(color) {
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+            
+        }
+        </script> 
+       
+        
+    </body>
+</html>
